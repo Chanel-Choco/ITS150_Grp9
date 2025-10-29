@@ -17,7 +17,7 @@ import javax.swing.*;
 
 /**
  *
- * @author Julianna Boado
+ * @author jb999
  */
 public class Login extends javax.swing.JFrame {
     
@@ -81,70 +81,69 @@ public class Login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         btnLogin = new javax.swing.JButton();
         textUser = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
         textPassword = new javax.swing.JPasswordField();
         seePassword = new javax.swing.JCheckBox();
         btnExit = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("Username:");
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Username");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, -1, -1));
 
-        jLabel2.setText("Password:");
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Password");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, -1, -1));
 
+        btnLogin.setBackground(new java.awt.Color(153, 153, 153));
+        btnLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnLogin.setText("Login");
+        btnLogin.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 70, 30));
 
-        jLabel3.setText("LOGIN");
+        textUser.setBackground(new java.awt.Color(153, 153, 153));
+        textUser.setForeground(new java.awt.Color(255, 255, 255));
+        textUser.setBorder(null);
+        textUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textUserActionPerformed(evt);
+            }
+        });
+        getContentPane().add(textUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 250, 30));
 
+        textPassword.setBackground(new java.awt.Color(153, 153, 153));
+        textPassword.setForeground(new java.awt.Color(255, 255, 255));
+        textPassword.setBorder(null);
+        getContentPane().add(textPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 250, 30));
+
+        seePassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seePasswordActionPerformed(evt);
+            }
+        });
+        getContentPane().add(seePassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, -1, -1));
+
+        btnExit.setBackground(new java.awt.Color(153, 153, 153));
+        btnExit.setForeground(new java.awt.Color(255, 255, 255));
         btnExit.setText("<");
+        btnExit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 30, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(266, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(245, 245, 245))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnExit)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnLogin))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(textUser, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 456, Short.MAX_VALUE)
-                    .addComponent(textPassword, javax.swing.GroupLayout.Alignment.LEADING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(seePassword)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(textUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(textPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(seePassword))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnLogin)
-                    .addComponent(btnExit))
-                .addGap(38, 38, 38))
-        );
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/securitysystem/martin-martz-W0NRebXbsjM-unsplash.jpg"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 300));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void textUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textUserActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textUserActionPerformed
+
+    private void seePasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seePasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_seePasswordActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,15 +173,15 @@ public class Login extends javax.swing.JFrame {
                 ResultSet rs = stmt.executeQuery();
 
                 if (rs.next()) {
-                    JOptionPane.showMessageDialog(Login.this, "Access Granted!");
-
                     // Update lastLogin time
                     PreparedStatement updateStmt = conn.prepareStatement(
                         "UPDATE users SET lastLogin = NOW() WHERE username = ?");
                     updateStmt.setString(1, user);
                     updateStmt.executeUpdate();
 
-                    openFakeOS();
+                    // Go directly to DesktopEnvironment (no message)
+                    new DesktopEnvironment().setVisible(true);
+                    dispose();
                 } else {
                     attemptCount++;
                     JOptionPane.showMessageDialog(Login.this, "Incorrect username or password.");
@@ -206,16 +205,6 @@ public class Login extends javax.swing.JFrame {
         }
     }
 
-    private void openFakeOS() {
-        JFrame osFrame = new JFrame("Protected OS");
-        osFrame.setSize(400, 300);
-        osFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        osFrame.add(new JLabel("Welcome to your secured system, " + textUser.getText() + "!",
-                SwingConstants.CENTER));
-        osFrame.setLocationRelativeTo(null);
-        osFrame.setVisible(true);
-        dispose();
-    }
 
     
     public static void main(String args[]) {
@@ -254,7 +243,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton btnLogin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JCheckBox seePassword;
     private javax.swing.JPasswordField textPassword;
     private javax.swing.JTextField textUser;
