@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import javax.swing.*;
 /**
  *
- * @author Julianna Boado
+ * @author jb999
  */
 public class Users extends javax.swing.JFrame {
     
@@ -43,8 +43,10 @@ public class Users extends javax.swing.JFrame {
         btnUser2 = new javax.swing.JButton();
         btnUser3 = new javax.swing.JButton();
         btnOther = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnUser1.setText("-------");
         btnUser1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -53,42 +55,22 @@ public class Users extends javax.swing.JFrame {
                 btnUser1ActionPerformed(evt);
             }
         });
+        getContentPane().add(btnUser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(108, 97, -1, -1));
 
         btnUser2.setText("-------");
         btnUser2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(btnUser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 97, -1, -1));
 
         btnUser3.setText("-------");
         btnUser3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(btnUser3, new org.netbeans.lib.awtextra.AbsoluteConstraints(108, 169, -1, -1));
 
         btnOther.setText("-------");
         btnOther.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(btnOther, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 169, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(238, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnOther)
-                    .addComponent(btnUser3)
-                    .addComponent(btnUser2)
-                    .addComponent(btnUser1))
-                .addGap(236, 236, 236))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(67, 67, 67)
-                .addComponent(btnUser1)
-                .addGap(29, 29, 29)
-                .addComponent(btnUser2)
-                .addGap(20, 20, 20)
-                .addComponent(btnUser3)
-                .addGap(18, 18, 18)
-                .addComponent(btnOther)
-                .addContainerGap(74, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/securitysystem/stefan-stefancik--g7axSVst6Y-unsplash.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 350));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -174,5 +156,6 @@ public class Users extends javax.swing.JFrame {
     private javax.swing.JButton btnUser1;
     private javax.swing.JButton btnUser2;
     private javax.swing.JButton btnUser3;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

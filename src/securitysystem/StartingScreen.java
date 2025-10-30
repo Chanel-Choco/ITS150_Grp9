@@ -12,7 +12,7 @@ import javax.swing.Timer;
 
 /**
  *
- * @author Julianna Boado
+ * @author jb999
  */
 public class StartingScreen extends javax.swing.JFrame {
     
@@ -46,37 +46,25 @@ public class StartingScreen extends javax.swing.JFrame {
 
         txtTime = new javax.swing.JLabel();
         txtDate = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        txtTime.setBackground(new java.awt.Color(0, 0, 0));
         txtTime.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         txtTime.setText("-- --");
         txtTime.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        getContentPane().add(txtTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 214, 235, -1));
 
+        txtDate.setBackground(new java.awt.Color(0, 0, 0));
         txtDate.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         txtDate.setText("-- -- -- --");
         txtDate.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        getContentPane().add(txtDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 251, 256, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtTime, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(249, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(214, Short.MAX_VALUE)
-                .addComponent(txtTime)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtDate)
-                .addGap(30, 30, 30))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/securitysystem/martin-martz-W0NRebXbsjM-unsplash.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 300));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -123,6 +111,7 @@ public class StartingScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel txtDate;
     private javax.swing.JLabel txtTime;
     // End of variables declaration//GEN-END:variables

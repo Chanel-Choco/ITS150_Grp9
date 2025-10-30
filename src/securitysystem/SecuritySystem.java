@@ -6,7 +6,7 @@ package securitysystem;
 
 /**
  *
- * @author Julianna Boado
+ * @author jb999
  */
 public class SecuritySystem {
 
